@@ -10,7 +10,7 @@ on:
 
 jobs:
   GLaDOS-Signin:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     env:
       USE_SMTP: ${{ secrets.USE_SMTP }}
       SMTP_SERVER: ${{ secrets.SMTP_SERVER }}
