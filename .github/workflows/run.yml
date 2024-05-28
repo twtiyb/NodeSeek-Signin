@@ -7,7 +7,12 @@ on:
     types: [ started ]
   schedule:
     - cron: 0 */3 * * *
-
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'The reason for the run.'  
+        required: true
+        default: 'Manual trigger' 
 jobs:
   GLaDOS-Signin:
     runs-on: ubuntu-latest
